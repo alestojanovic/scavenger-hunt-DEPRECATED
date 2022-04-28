@@ -39,13 +39,28 @@
   background-color: #535353;
 }
 
-.way-button {
+.three-button {
   background-color: #535353;
   border-radius: 9px;
   cursor: pointer;
-  padding: 3px;
+  padding: 5px;
   color: white;
 }
-.way-button:hover {
+.three-button:hover {
   background-color: #272727;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.footer-link {
+  color: transparent;
+}
+
+.footer-link:hover {
+  color: #535353;
 }

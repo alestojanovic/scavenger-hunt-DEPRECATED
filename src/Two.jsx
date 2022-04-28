@@ -9,11 +9,23 @@ export const Two = () => {
     navigate(`${PrivateRoutes.PARAM_THREE}`);
   };
   return (
-    <div>
-      <button className="two-button" onClick={routeChange}>
-        <img src={logo} className="App-logo" alt="logo" /> <br />
-        Download me and find the gift inside.
-      </button>
-    </div>
+    <>
+      <div>
+        <button className="two-button" onClick={routeChange}>
+          <img src={logo} className="App-logo" alt="logo" /> <br />
+          Download me and find the gift inside.
+        </button>
+      </div>
+      <div className="footer">
+        <a
+          className="footer-link"
+          href="https://github.com/alestojanovic/scavenger-hunt"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://github.com/alestojanovic/scavenger-hunt
+        </a>
+      </div>
+    </>
   );
 };

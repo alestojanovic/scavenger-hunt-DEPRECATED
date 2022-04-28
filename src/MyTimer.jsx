@@ -28,11 +28,11 @@ const MyTimer = ({ expiryTimestamp }) => {
       </div>
       <p>{"If you enable this button it will show you the way"}</p>
       {enable ? (
-        <button className="way-button" onClick={handleEnable}>
+        <button className="three-button" onClick={handleEnable}>
           The Way
         </button>
       ) : (
-        <button className="way-button" onClick={routeChange}>
+        <button className="three-button" onClick={routeChange}>
           The Way
         </button>
       )}
