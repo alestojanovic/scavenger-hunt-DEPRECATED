@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { PrivateRoutes } from "./PrivateRoutes";
-import logo from "./logo.svg";
+import { PrivateRoutes } from "../PrivateRoutes";
+import logo from "../logo.svg";
 
 export const Two = () => {
   const navigate = useNavigate();

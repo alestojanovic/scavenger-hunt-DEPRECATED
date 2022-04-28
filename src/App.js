@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import MyTimer from "./MyTimer";
-import { One } from "./One";
-import { Two } from "./Two";
+import Three from "./components/Three";
+import { One } from "./components/One";
+import { Two } from "./components/Two";
 import { PrivateRoutes } from "./PrivateRoutes";
 import "./App.css";
 
@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
       <Router>
         <Routes>
-          <Route path={PrivateRoutes.PARAM_THREE} element={<MyTimer />} />
+          <Route path={PrivateRoutes.PARAM_THREE} element={<Three />} />
           <Route path={PrivateRoutes.PARAM_ONE} element={<One />} />
           <Route path={PrivateRoutes.PARAM_TWO} element={<Two />} />
         </Routes>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { PrivateRoutes } from "./PrivateRoutes";
+import { PrivateRoutes } from "../PrivateRoutes";
 
 export const One = () => {
   const navigate = useNavigate();
