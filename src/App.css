@@ -29,14 +29,14 @@
 
 .two-button {
   background-color: transparent;
-  color: white;
+  color: #61dafb;
   border: none;
   border-radius: 9px;
   cursor: pointer;
   padding: 3px;
 }
 .two-button:hover {
-  background-color: #535353;
+  background-color: #61dafb;
 }
 
 .three-button {
@@ -47,7 +47,8 @@
   color: white;
 }
 .three-button:hover {
-  background-color: #272727;
+  background-color: #61dafb;
+  border-color: #61dafb;
 }
 
 .footer {
@@ -62,9 +63,10 @@
 }
 
 .footer-link:hover {
-  color: #535353;
+  color: #61dafb;
 }
 
 .time-counter {
   font-size: 100px;
+  color: #61dafb;
 }
