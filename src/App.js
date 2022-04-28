@@ -12,7 +12,10 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<MyTimer expiryTimestamp={time} />} />
+          <Route
+            path={PrivateRoutes.PARAM_THREE}
+            element={<MyTimer expiryTimestamp={time} />}
+          />
           <Route path={PrivateRoutes.PARAM_ONE} element={<One />} />
           <Route path={PrivateRoutes.PARAM_TWO} element={<Two />} />
         </Routes>

@@ -9,3 +9,26 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.one-button {
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  padding: 3px;
+}
+.one-button:hover {
+  background-color: #272727;
+}
+
+.way-button {
+  background-color: #535353;
+  border-radius: 9px;
+  cursor: pointer;
+  padding: 3px;
+  color: white;
+}
+.way-button:hover {
+  background-color: #272727;
+}

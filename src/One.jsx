@@ -9,7 +9,10 @@ export const One = () => {
   };
   return (
     <div>
-      <button onClick={routeChange}> You are almost there </button>
+      <button className="one-button" onClick={routeChange}>
+        {" "}
+        You are almost there{" "}
+      </button>
     </div>
   );
 };

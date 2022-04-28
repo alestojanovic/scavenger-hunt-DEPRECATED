@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTimer } from "react-timer-hook";
+import { useNavigate } from "react-router-dom";
+import { PrivateRoutes } from "./PrivateRoutes";
 
 const MyTimer = ({ expiryTimestamp }) => {
+  const navigate = useNavigate();
+  const [enable, setEnable] = useState(true);
+
+  const handleEnable = () => {
+    setEnable(false);
+  };
+
+  const routeChange = () => {
+    navigate(`${PrivateRoutes.PARAM_ONE}`);
+  };
   const { seconds, minutes, hours, days } = useTimer({
     expiryTimestamp,
     onExpire: () => console.warn("onExpire called"),
@@ -15,7 +27,15 @@ const MyTimer = ({ expiryTimestamp }) => {
         <span>{seconds}</span>
       </div>
       <p>{"If you enable this button it will show you the way"}</p>
-      <button disabled>The Way</button>
+      {enable ? (
+        <button className="way-button" onClick={handleEnable}>
+          The Way
+        </button>
+      ) : (
+        <button className="way-button" onClick={routeChange}>
+          The Way
+        </button>
+      )}
     </div>
   );
 };
