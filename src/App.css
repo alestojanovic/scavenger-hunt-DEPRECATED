@@ -43,7 +43,7 @@
   background-color: #535353;
   border-radius: 9px;
   cursor: pointer;
-  padding: 5px;
+  padding: 8px;
   color: white;
 }
 .three-button:hover {
@@ -63,4 +63,8 @@
 
 .footer-link:hover {
   color: #535353;
+}
+
+.time-counter {
+  font-size: 100px;
 }

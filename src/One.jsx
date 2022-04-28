@@ -9,6 +9,9 @@ export const One = () => {
   };
   return (
     <div>
+      <h3>
+        Not everything is as it seems... you should inspect this situation.
+      </h3>
       <button className="one-button" onClick={routeChange}>
         {" "}
         You are almost there{" "}
