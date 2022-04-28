@@ -10,6 +10,11 @@
   color: white;
 }
 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
 .one-button {
   background-color: transparent;
   color: transparent;
@@ -20,6 +25,18 @@
 }
 .one-button:hover {
   background-color: #272727;
+}
+
+.two-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  padding: 3px;
+}
+.two-button:hover {
+  background-color: #535353;
 }
 
 .way-button {
