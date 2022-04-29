@@ -4,6 +4,7 @@ import { SiGithub } from "react-icons/si";
 import { toast } from "react-toastify";
 import { StyleSheet, css } from "aphrodite";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { useLock } from "../utils";
 import { PrivateRoutes } from "../PrivateRoutes";
 import { MessageThree, PromptMessage } from "../Messages";
 import logo from "../logo.svg";
@@ -49,8 +50,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Three = () => {
+const Three = () => {
   const navigate = useNavigate();
+  const [unLockNavigation, setUnlockNavigation] = useState(true);
   const routeChange = () => {
     navigate(`${PrivateRoutes.PARAM_ONE}`);
   };
@@ -63,18 +65,25 @@ export const Three = () => {
     }
   });
 
+  useLock(`${PromptMessage.END}`, unLockNavigation);
+
+  const handleUnlockNavigation = () => {
+    setToggleIcon(!toggleIcon);
+    setUnlockNavigation(false);
+  };
+
   return (
     <>
       <h1 className={css(styles.title)}>{MessageThree.CONGRATS}</h1>
       {toggleIcon ? (
         <AiOutlineHeart
-          onClick={() => setToggleIcon(!toggleIcon)}
+          onClick={handleUnlockNavigation}
           size={70}
           className={css(styles.heartIcon)}
         />
       ) : (
         <AiFillHeart
-          onClick={() => setToggleIcon(!toggleIcon)}
+          onClick={handleUnlockNavigation}
           size={70}
           className={css(styles.heartIcon)}
         />
@@ -98,3 +107,5 @@ export const Three = () => {
     </>
   );
 };
+
+export default React.memo(Three);

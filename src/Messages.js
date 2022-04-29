@@ -21,4 +21,5 @@ export const PromptMessage = {
   PASS: "Maybe it works afterall, who knew...",
   DENY: "Not this time! Did you seriously think it will work? You are locked here until you find a way to continue.",
   THANKS: "Thank you",
+  END: "You are not going anywhere until you press like!",
 };
