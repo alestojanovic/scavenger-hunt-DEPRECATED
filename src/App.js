@@ -1,13 +1,27 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { StyleSheet, css } from "aphrodite";
 import One from "./components/One";
 import { Two } from "./components/Two";
 import { Three } from "./components/Three";
 import { PrivateRoutes } from "./PrivateRoutes";
-import "./App.css";
+
+const styles = StyleSheet.create({
+  app: {
+    backgroundColor: "#282c34",
+    textAlign: "center",
+    color: "white",
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "calc(10px + 2vmin)",
+  },
+});
 
 const App = () => {
   return (
-    <div className="App">
+    <div className={css(styles.app)}>
       <Router>
         <Routes>
           <Route path={PrivateRoutes.PARAM_ONE} element={<One />} />

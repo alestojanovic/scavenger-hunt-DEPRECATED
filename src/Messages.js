@@ -1,11 +1,12 @@
 export const MessageOne = {
   START: "You are good to go!",
   TITLE: "Happy Hacking",
-  BUTTON: "The Way",
+  HINT: "This button seems to be broken... can we fix it ",
+  BUTTON: "Beep Boop",
 };
 
 export const MessageTwo = {
-  HINT: "Not everything is as it seems... you should inspect this situation.",
+  HINT: "When you are programming things often hide in plain sight... you should probably inspect this situation.",
   PEP: "You are almost there",
 };
 

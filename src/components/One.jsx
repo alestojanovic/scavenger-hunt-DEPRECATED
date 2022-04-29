@@ -2,8 +2,34 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Countdown from "react-countdown";
 import { useNavigate } from "react-router-dom";
+import { StyleSheet, css } from "aphrodite";
+import { BsFillPatchQuestionFill } from "react-icons/bs";
 import { PrivateRoutes } from "../PrivateRoutes";
 import { MessageOne } from "../Messages";
+
+const styles = StyleSheet.create({
+  timeCounter: {
+    fontSize: "100px",
+    color: "#61dafb",
+  },
+
+  iconStyle: {
+    color: "#61dafb",
+  },
+
+  oneButton: {
+    backgroundColor: "#535353",
+    borderStyle: "solid",
+    borderRadius: "9px",
+    cursor: "pointer",
+    padding: "8px",
+    color: "white",
+    ":hover": {
+      backgroundColor: "#61dafb",
+      borderColor: "#61dafb",
+    },
+  },
+});
 
 const Completionist = () => <span>{MessageOne.START}</span>;
 
@@ -30,12 +56,12 @@ const One = () => {
   const navigate = useNavigate();
   const [enable, setEnable] = useState(true);
 
-  const handleEnable = () => {
-    setEnable(false);
-  };
-
   const routeChange = () => {
     navigate(`${PrivateRoutes.PARAM_TWO}`);
+  };
+
+  const handleEnable = () => {
+    setEnable(false);
   };
 
   useEffect(() => {
@@ -58,7 +84,7 @@ const One = () => {
       <div>
         <h1>{MessageOne.TITLE}</h1>
       </div>
-      <span className="time-counter">
+      <span className={css(styles.timeCounter)}>
         <Countdown
           date={data.date + data.delay}
           renderer={renderer}
@@ -75,13 +101,19 @@ const One = () => {
           }}
         />
       </span>
-      <p>{"If you manage to use this button it will show you the way"}</p>
+      <p>
+        {MessageOne.HINT}
+        <BsFillPatchQuestionFill
+          onClick={handleEnable}
+          className={css(styles.iconStyle)}
+        />
+      </p>
       {enable ? (
-        <button className="three-button" onClick={handleEnable}>
+        <button className={css(styles.oneButton)} onClick={handleEnable}>
           {MessageOne.BUTTON}
         </button>
       ) : (
-        <button className="three-button" onClick={routeChange}>
+        <button className={css(styles.oneButton)} onClick={routeChange}>
           {MessageOne.BUTTON}
         </button>
       )}
