@@ -52,7 +52,7 @@ const One = () => {
     { date: Date.now(), delay: 86400000 } //Milliseconds
   );
   const wantedDelay = 86400000; //Milliseconds
-  const [enable, setEnable] = useState(true);
+  const [enableButton, setEnable] = React.useState(true);
   const navigate = useNavigate();
 
   const routeChange = () => {
@@ -107,7 +107,7 @@ const One = () => {
           className={css(styles.iconStyle)}
         />
       </p>
-      {enable ? (
+      {enableButton ? (
         <button className={css(styles.oneButton)} onClick={handleEnable}>
           {MessageOne.BUTTON}
         </button>

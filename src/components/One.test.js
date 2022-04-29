@@ -1,3 +1,4 @@
+import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { StyleSheetTestUtils } from "aphrodite";
 import { MessageOne } from "../Messages";
@@ -23,10 +24,12 @@ test("Renders header", () => {
   expect(header).toBeInTheDocument();
 });
 
-test("Enable button", () => {
+test("First click enable the button", () => {
+  const setStateMock = jest.fn();
+  const useStateMock = (useState) => [useState, setStateMock];
+  jest.spyOn(React, "useState").mockImplementation(useStateMock);
   render(<One />);
   const button = screen.getByText(MessageOne.BUTTON);
-  const header = screen.getByText(MessageOne.TITLE);
   fireEvent.click(button);
-  expect(header).toBeInTheDocument();
+  expect(setStateMock).toBeCalledWith(false);
 });
