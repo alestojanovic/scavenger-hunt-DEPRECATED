@@ -13,4 +13,5 @@ export const MessageTwo = {
 export const MessageThree = {
   GIFT: "Download me and find the gift inside.",
   GITHUB: "https://github.com/alestojanovic/scavenger-hunt",
+  CONGRATS: "CONGRATULATIONS!",
 };
