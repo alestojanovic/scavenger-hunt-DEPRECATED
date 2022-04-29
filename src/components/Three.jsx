@@ -8,14 +8,14 @@ import logo from "../logo.svg";
 const styles = StyleSheet.create({
   threeButton: {
     backgroundColor: "transparent",
-    color: "#61dafb",
+    color: "white",
     border: "none",
-    borderRadius: "9px",
+    borderRadius: "80px",
     cursor: "pointer",
-    padding: "3px",
+    padding: "40px",
 
     ":hover": {
-      backgroundColor: "#61dafb",
+      background: "linear-gradient(#73fb54,#ea54fb, #fbf054, #ea54fb, #73fb54)",
     },
   },
 

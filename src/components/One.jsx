@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
   },
 
   oneButton: {
-    backgroundColor: "#535353",
+    background: "linear-gradient(#eee, #333)",
     borderStyle: "solid",
     borderRadius: "9px",
     cursor: "pointer",
     padding: "8px",
     color: "white",
     ":hover": {
-      backgroundColor: "#61dafb",
+      background: "linear-gradient(#61dafb, #333)",
       borderColor: "#61dafb",
     },
   },

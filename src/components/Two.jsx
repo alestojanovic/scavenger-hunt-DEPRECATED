@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     padding: "3px",
 
     ":hover": {
-      backgroundColor: "#272727",
+      background: "linear-gradient(#272727, #333)",
     },
 
     "::selection": { background: "transparent" },
