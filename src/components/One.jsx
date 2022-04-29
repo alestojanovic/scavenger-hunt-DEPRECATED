@@ -52,9 +52,8 @@ const One = () => {
     { date: Date.now(), delay: 86400000 } //Milliseconds
   );
   const wantedDelay = 86400000; //Milliseconds
-
-  const navigate = useNavigate();
   const [enable, setEnable] = useState(true);
+  const navigate = useNavigate();
 
   const routeChange = () => {
     navigate(`${PrivateRoutes.PARAM_TWO}`);
