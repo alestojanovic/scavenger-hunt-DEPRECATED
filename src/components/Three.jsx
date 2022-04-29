@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { StyleSheet, css } from "aphrodite";
 import { SiGithub } from "react-icons/si";
+import { toast } from "react-toastify";
+import { StyleSheet, css } from "aphrodite";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { PrivateRoutes } from "../PrivateRoutes";
-import { MessageThree } from "../Messages";
+import { MessageThree, PromptMessage } from "../Messages";
 import logo from "../logo.svg";
 
 const styles = StyleSheet.create({
@@ -54,10 +55,17 @@ export const Three = () => {
     navigate(`${PrivateRoutes.PARAM_ONE}`);
   };
   const [toggleIcon, setToggleIcon] = useState(true);
+  useEffect(() => {
+    if (toggleIcon) {
+      return;
+    } else {
+      toast.success(PromptMessage.THANKS);
+    }
+  });
+
   return (
     <>
       <h1 className={css(styles.title)}>{MessageThree.CONGRATS}</h1>
-
       {toggleIcon ? (
         <AiOutlineHeart
           onClick={() => setToggleIcon(!toggleIcon)}

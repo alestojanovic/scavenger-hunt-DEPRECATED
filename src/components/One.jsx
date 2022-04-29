@@ -4,8 +4,9 @@ import Countdown from "react-countdown";
 import { useNavigate } from "react-router-dom";
 import { StyleSheet, css } from "aphrodite";
 import { BsFillPatchQuestionFill } from "react-icons/bs";
+import { useUnlock } from "../utils";
 import { PrivateRoutes } from "../PrivateRoutes";
-import { MessageOne } from "../Messages";
+import { MessageOne, PromptMessage } from "../Messages";
 
 const styles = StyleSheet.create({
   timeCounter: {
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
     color: "#61dafb",
   },
 
-  iconStyle: {
+  questionIcon: {
     color: "#61dafb",
   },
 
@@ -62,6 +63,7 @@ const One = () => {
   const handleEnable = () => {
     setEnable(false);
   };
+  useUnlock(`${PromptMessage.PASS}`, routeChange);
 
   useEffect(() => {
     const savedDate = getLocalStorageValue("end_date");
@@ -104,7 +106,7 @@ const One = () => {
         {MessageOne.HINT}
         <BsFillPatchQuestionFill
           onClick={handleEnable}
-          className={css(styles.iconStyle)}
+          className={css(styles.questionIcon)}
         />
       </p>
       {enableButton ? (

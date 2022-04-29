@@ -4,6 +4,8 @@ import One from "./components/One";
 import { Two } from "./components/Two";
 import { Three } from "./components/Three";
 import { PrivateRoutes } from "./PrivateRoutes";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const styles = StyleSheet.create({
   app: {
@@ -29,6 +31,8 @@ const App = () => {
           <Route path={PrivateRoutes.PARAM_THREE} element={<Three />} />
         </Routes>
       </Router>
+
+      <ToastContainer autoClose={3000} hideProgressBar />
     </div>
   );
 };
