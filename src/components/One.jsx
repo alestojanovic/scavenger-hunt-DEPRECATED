@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Countdown from "react-countdown";
 import { useNavigate } from "react-router-dom";
 import { StyleSheet, css } from "aphrodite";
@@ -66,7 +65,7 @@ const One = () => {
     { date: Date.now(), delay: 86400000 } //Milliseconds
   );
   const wantedDelay = 86400000; //Milliseconds
-  const [enableButton, setEnable] = React.useState(true);
+  const [enableButton, setEnableButton] = React.useState(true);
   const navigate = useNavigate();
 
   const routeChange = () => {
@@ -74,7 +73,7 @@ const One = () => {
   };
 
   const handleEnable = () => {
-    setEnable(false);
+    setEnableButton(false);
   };
   useUnlock(`${PromptMessage.PASS}`, routeChange);
 
