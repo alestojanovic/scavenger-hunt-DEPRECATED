@@ -10,7 +10,22 @@ import { MessageThree, PromptMessage } from "../Messages";
 import logo from "../logo.svg";
 
 const styles = StyleSheet.create({
-  threeButton: {
+  grayButton: {
+    backgroundColor: "transparent",
+    color: "white",
+    border: "none",
+    borderRadius: "80px",
+    cursor: "pointer",
+    padding: "40px",
+
+    ":hover": {
+      background: "linear-gradient(#808080, #a1a1a1)",
+    },
+
+    "::selection": { background: "transparent" },
+  },
+
+  colorfulButton: {
     backgroundColor: "transparent",
     color: "white",
     border: "none",
@@ -89,7 +104,12 @@ const Three = () => {
         />
       )}
       <div>
-        <button className={css(styles.threeButton)} onClick={routeChange}>
+        <button
+          className={css(
+            toggleIcon ? styles.grayButton : styles.colorfulButton
+          )}
+          onClick={routeChange}
+        >
           <img src={logo} className={css(styles.appLogo)} alt="logo" /> <br />
           {MessageThree.GIFT}
         </button>

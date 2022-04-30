@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 
     "::selection": { background: "transparent" },
   },
-  continueButton: {
+  redButton: {
     background: "linear-gradient(#eee, #333)",
     borderStyle: "solid",
     borderRadius: "9px",
@@ -28,8 +28,21 @@ const styles = StyleSheet.create({
     padding: "8px",
     color: "white",
     ":hover": {
-      background: "linear-gradient(#61dafb, #333)",
-      borderColor: "#61dafb",
+      background: "linear-gradient(#ff0000, #333)",
+      borderColor: "#ff0000",
+    },
+  },
+
+  greenButton: {
+    background: "linear-gradient(#eee, #333)",
+    borderStyle: "solid",
+    borderRadius: "9px",
+    cursor: "pointer",
+    padding: "8px",
+    color: "white",
+    ":hover": {
+      background: "linear-gradient(#adff2f, #333)",
+      borderColor: "#adff2f",
     },
   },
 });
@@ -60,7 +73,12 @@ export const Two = () => {
 
       <h3>{MessageTwo.HINT}</h3>
 
-      <button className={css(styles.continueButton)} onClick={routeChange}>
+      <button
+        className={css(
+          unLockNavigation ? styles.redButton : styles.greenButton
+        )}
+        onClick={routeChange}
+      >
         {" "}
         {MessageTwo.CONTINUE}{" "}
       </button>
