@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Completionist = () => <span>{MessageOne.START}</span>;
+const Completionist = () => <span>Test</span>;
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
